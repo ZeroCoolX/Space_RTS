@@ -53,6 +53,7 @@
   <instances>
     <instance objName="obj_worker" x="96" y="32" name="inst_A778CF38" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_soldier" x="128" y="96" name="inst_9EF17C91" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_mouse" x="32" y="96" name="inst_BF5A1A58" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
