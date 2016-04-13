@@ -5,7 +5,7 @@
   <visible>0</visible>
   <depth>0</depth>
   <persistent>-1</persistent>
-  <parentName>&lt;undefined&gt;</parentName>
+  <parentName>obj_ship</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
     <event eventtype="0" enumb="0">
@@ -28,12 +28,16 @@
             <string>///Initialize ship
 
 scr_ship_init(5, -1);
+
+if(instance_exists(obj_player_ship)){
+    foe = instance_nearest(x, y, obj_player_ship);
+}
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_ship">
+    <event eventtype="3" enumb="0">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -50,18 +54,82 @@ scr_ship_init(5, -1);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Collide
-
-motion_add(point_direction(other.x, other.y, x, y), 1);
-
-//check to see if you would be stuck
-if(x == other.x &amp;&amp; y == other.y){
-    if(id &gt; other.id){
-        x+=1;
-    }else{
-        x -=1;
-    }
+            <string>///State controller
+if(instance_exists(obj_player_ship)){
+    foe = instance_nearest(x, y, obj_player_ship);
 }
+
+if(state == 'chase'){
+    scr_enemy_ship_chase();
+}else if (state == 'attack'){
+    scr_enemy_ship_attack();
+}else if(state == 'idle'){
+    scr_enemy_ship_idle();
+}
+
+image_angle = direction;//angle image facing
+
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="6" enumb="56">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///select the ship
+
+if(instance_exists(obj_mouse)){
+    scr_toggle_select(obj_mouse.px, obj_mouse.py, mouse_x, mouse_y);   
+}
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///draw selected
+
+if(selected){
+    draw_set_alpha(0.25);
+    draw_circle_color(x, y, 16, c_lime, c_lime, true);
+    draw_set_alpha(0.1);
+    draw_circle_color(x, y, 16, c_lime, c_lime, false);
+    draw_set_alpha(1);
+}
+
+draw_self();//draw the ship
 </string>
           </argument>
         </arguments>

@@ -4,7 +4,7 @@
   <solid>0</solid>
   <visible>0</visible>
   <depth>0</depth>
-  <persistent>-1</persistent>
+  <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
@@ -25,15 +25,20 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Initialize ship
+            <string>///Initialize the particle system
 
-scr_ship_init(5, -1);
+global.ps = part_system_create();
+
+//Create the particle type
+scr_part_lazer_init();
+scr_part_enemy_lazer_init();
+
 </string>
           </argument>
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="obj_ship">
+    <event eventtype="7" enumb="3">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -50,18 +55,10 @@ scr_ship_init(5, -1);
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>///Collide
-
-motion_add(point_direction(other.x, other.y, x, y), 1);
-
-//check to see if you would be stuck
-if(x == other.x &amp;&amp; y == other.y){
-    if(id &gt; other.id){
-        x+=1;
-    }else{
-        x -=1;
-    }
-}
+            <string>///Kill the particle system and types
+part_type_destroy(global.pt_lazer);
+part_type_destroy(global.pt_enemy_lazer);
+part_system_destroy(global.ps);
 </string>
           </argument>
         </arguments>

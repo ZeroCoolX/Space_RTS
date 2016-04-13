@@ -6,11 +6,14 @@
   <NewExtensions/>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spr_worker</sprite>
-    <sprite>sprites\spr_soldier</sprite>
+    <sprite>sprites\spr_player_worker</sprite>
+    <sprite>sprites\spr_enemy_soldier</sprite>
+    <sprite>sprites\spr_player_soldier</sprite>
     <sprite>sprites\spr_mask</sprite>
     <sprite>sprites\spr_target</sprite>
     <sprite>sprites\spr_mouse</sprite>
+    <sprite>sprites\spr_lazer</sprite>
+    <sprite>sprites\spr_enemy_lazer</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -19,13 +22,37 @@
     <script>scripts\scr_ship_idle.gml</script>
     <script>scripts\scr_ship_move.gml</script>
     <script>scripts\scr_toggle_select.gml</script>
+    <script>scripts\scr_move_view.gml</script>
+    <script>scripts\scr_enemy_ship_attack.gml</script>
+    <script>scripts\scr_enemy_ship_chase.gml</script>
+    <script>scripts\scr_enemy_ship_idle.gml</script>
+    <script>scripts\scr_part_lazer_init.gml</script>
+    <script>scripts\scr_part_enemy_lazer_init.gml</script>
+    <script>scripts\scr_weapon_init.gml</script>
   </scripts>
   <objects name="objects">
     <object>objects\obj_ship</object>
-    <object>objects\obj_worker</object>
-    <object>objects\obj_soldier</object>
-    <object>objects\obj_target</object>
-    <object>objects\obj_mouse</object>
+    <objects name="Baddies">
+      <object>objects\obj_enemy_ship</object>
+      <object>objects\obj_enemy_soldier</object>
+      <object>objects\obj_enemy_lazer</object>
+      <object>objects\obj_enemy_weapon</object>
+    </objects>
+    <objects name="Players">
+      <object>objects\obj_player_worker</object>
+      <object>objects\obj_player_soldier</object>
+      <object>objects\obj_player_ship</object>
+      <object>objects\obj_lazer</object>
+      <object>objects\obj_target</object>
+      <object>objects\obj_weapon</object>
+    </objects>
+    <objects name="Control">
+      <object>objects\obj_mouse</object>
+      <object>objects\obj_view_controller</object>
+    </objects>
+    <objects name="Effects">
+      <object>objects\obj_ps</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>

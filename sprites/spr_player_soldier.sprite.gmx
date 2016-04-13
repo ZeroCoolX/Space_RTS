@@ -8,7 +8,7 @@
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
   <bbox_left>0</bbox_left>
-  <bbox_right>22</bbox_right>
+  <bbox_right>23</bbox_right>
   <bbox_top>0</bbox_top>
   <bbox_bottom>15</bbox_bottom>
   <HTile>0</HTile>
@@ -20,6 +20,6 @@
   <width>24</width>
   <height>16</height>
   <frames>
-    <frame index="0">images\spr_worker_0.png</frame>
+    <frame index="0">images\spr_player_soldier_0.png</frame>
   </frames>
 </sprite>

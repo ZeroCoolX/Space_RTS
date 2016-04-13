@@ -20,6 +20,6 @@
   <width>24</width>
   <height>16</height>
   <frames>
-    <frame index="0">images\spr_soldier_0.png</frame>
+    <frame index="0">images\spr_enemy_soldier_0.png</frame>
   </frames>
 </sprite>
