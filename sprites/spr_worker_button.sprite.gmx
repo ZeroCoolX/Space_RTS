@@ -2,7 +2,7 @@
 <sprite>
   <type>0</type>
   <xorig>12</xorig>
-  <yorigin>8</yorigin>
+  <yorigin>12</yorigin>
   <colkind>1</colkind>
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
@@ -10,7 +10,7 @@
   <bbox_left>0</bbox_left>
   <bbox_right>23</bbox_right>
   <bbox_top>0</bbox_top>
-  <bbox_bottom>15</bbox_bottom>
+  <bbox_bottom>23</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
@@ -18,9 +18,9 @@
   </TextureGroups>
   <For3D>0</For3D>
   <width>24</width>
-  <height>16</height>
+  <height>24</height>
   <frames>
-    <frame index="0">images\spr_player_worker_0.png</frame>
-    <frame index="1">images\spr_player_worker_1.png</frame>
+    <frame index="0">images\spr_worker_button_0.png</frame>
+    <frame index="1">images\spr_worker_button_1.png</frame>
   </frames>
 </sprite>

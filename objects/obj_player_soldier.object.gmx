@@ -26,8 +26,9 @@
           <argument>
             <kind>1</kind>
             <string>///Initialize ship
-
+image_speed = 0.5;
 scr_ship_init(7, obj_lazer);
+
 </string>
           </argument>
         </arguments>

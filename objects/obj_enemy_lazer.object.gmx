@@ -26,8 +26,8 @@
           <argument>
             <kind>1</kind>
             <string>///Initialize the "lazer. beam"
-
 speed = 10;
+event_inherited();
 </string>
           </argument>
         </arguments>

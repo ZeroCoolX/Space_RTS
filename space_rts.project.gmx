@@ -14,6 +14,10 @@
     <sprite>sprites\spr_mouse</sprite>
     <sprite>sprites\spr_lazer</sprite>
     <sprite>sprites\spr_enemy_lazer</sprite>
+    <sprite>sprites\spr_base</sprite>
+    <sprite>sprites\spr_rock</sprite>
+    <sprite>sprites\spr_worker_button</sprite>
+    <sprite>sprites\spr_soldier_button</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -29,8 +33,15 @@
     <script>scripts\scr_part_lazer_init.gml</script>
     <script>scripts\scr_part_enemy_lazer_init.gml</script>
     <script>scripts\scr_weapon_init.gml</script>
+    <script>scripts\scr_station_idle.gml</script>
+    <script>scripts\scr_station_selected.gml</script>
+    <script>scripts\scr_station_building.gml</script>
   </scripts>
+  <fonts name="fonts">
+    <font>fonts\fnt_gui</font>
+  </fonts>
   <objects name="objects">
+    <object>objects\obj_globals</object>
     <object>objects\obj_ship</object>
     <objects name="Baddies">
       <object>objects\obj_enemy_ship</object>
@@ -49,9 +60,16 @@
     <objects name="Control">
       <object>objects\obj_mouse</object>
       <object>objects\obj_view_controller</object>
+      <object>objects\obj_worker_button</object>
+      <object>objects\obj_ship_creation_button_parent</object>
+      <object>objects\obj_soldier_button</object>
     </objects>
     <objects name="Effects">
       <object>objects\obj_ps</object>
+    </objects>
+    <objects name="Enviroment">
+      <object>objects\obj_base</object>
+      <object>objects\obj_crystal</object>
     </objects>
   </objects>
   <rooms name="rooms">
