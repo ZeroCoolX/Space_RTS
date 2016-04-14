@@ -26,8 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>///Initialize ship
-
-scr_ship_init(5, -1);
+scr_ship_init(5, -1, 1);
 image_speed = 0.5;
 
 </string>
@@ -84,12 +83,13 @@ if(instance_exists(obj_enemy_ship)){
     foe = -1;
 }
 
-
+script_execute(state);
+/*
 if(state == 'move'){
     scr_ship_move();
 }else if (state == 'idle'){
     scr_ship_idle();
-}
+}*/
 
 if(foe != -1 &amp;&amp; point_distance(x, y, foe.x, foe.y) &lt; 128){
     image_angle = point_direction(x, y, foe.x, foe.y);//face the enemy
@@ -164,7 +164,7 @@ if(selected){
     }
 
     target = instance_create(mouse_x, mouse_y, obj_target);
-    state = 'move';
+    state = scr_ship_move;
 }
 
 </string>

@@ -26,12 +26,13 @@
           <argument>
             <kind>1</kind>
             <string>///Initialize ship
-
-scr_ship_init(5, -1);
+scr_ship_init(5, -1, 0);
 
 if(instance_exists(obj_player_ship)){
     foe = instance_nearest(x, y, obj_player_ship);
 }
+
+
 </string>
           </argument>
         </arguments>
@@ -85,14 +86,15 @@ if(instance_exists(obj_player_ship)){
 }else{
     foe = -1;
 }
-
+script_execute(state);
+/*
 if(state == 'chase'){
     scr_enemy_ship_chase();
 }else if (state == 'attack'){
     scr_enemy_ship_attack();
 }else if(state == 'idle'){
     scr_enemy_ship_idle();
-}
+}*/
 
 image_angle = direction;//angle image facing
 

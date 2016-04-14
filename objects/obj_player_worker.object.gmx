@@ -27,7 +27,8 @@
             <kind>1</kind>
             <string>///Control the worker states
 event_inherited();
-
+script_execute(state);
+/*
 if(state == 'move'){
     scr_ship_move();
 }else if (state == 'idle'){
@@ -38,7 +39,7 @@ if(state == 'move'){
 }else if (state == 'mined'){
     scr_ship_move();
     target = obj_base;
-}
+}*/
 </string>
           </argument>
         </arguments>
@@ -67,7 +68,9 @@ if(state == 'move'){
         instance_destroy();
     }
  }
-state = 'mined';
+state = scr_ship_move;
+target = obj_base;
+
 </string>
           </argument>
         </arguments>
@@ -91,9 +94,10 @@ state = 'mined';
           <argument>
             <kind>1</kind>
             <string>///Change to the mine state 
-if(state == 'mined'){
-    global.crystals += 5;
-    state = 'mine';
+if(target == obj_base){
+    global.crystals += 1;
+    state = scr_ship_move;
+    target = obj_crystal;
 }
 </string>
           </argument>

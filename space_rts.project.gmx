@@ -23,19 +23,26 @@
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_ship_init.gml</script>
-    <script>scripts\scr_ship_idle.gml</script>
-    <script>scripts\scr_ship_move.gml</script>
-    <script>scripts\scr_toggle_select.gml</script>
     <script>scripts\scr_move_view.gml</script>
-    <script>scripts\scr_enemy_ship_attack.gml</script>
-    <script>scripts\scr_enemy_ship_chase.gml</script>
-    <script>scripts\scr_enemy_ship_idle.gml</script>
     <script>scripts\scr_part_lazer_init.gml</script>
-    <script>scripts\scr_part_enemy_lazer_init.gml</script>
     <script>scripts\scr_weapon_init.gml</script>
-    <script>scripts\scr_station_idle.gml</script>
-    <script>scripts\scr_station_selected.gml</script>
-    <script>scripts\scr_station_building.gml</script>
+    <scripts name="Player">
+      <script>scripts\scr_ship_idle.gml</script>
+      <script>scripts\scr_ship_move.gml</script>
+      <script>scripts\scr_toggle_select.gml</script>
+    </scripts>
+    <scripts name="Baddies">
+      <script>scripts\scr_enemy_ship_idle.gml</script>
+      <script>scripts\scr_enemy_ship_attack.gml</script>
+      <script>scripts\scr_part_enemy_lazer_init.gml</script>
+      <script>scripts\scr_enemy_ship_chase.gml</script>
+    </scripts>
+    <scripts name="Enviroment">
+      <script>scripts\scr_station_selected.gml</script>
+      <script>scripts\scr_station_building.gml</script>
+      <script>scripts\scr_station_idle.gml</script>
+    </scripts>
+    <script>scripts\scr_view_zoom.gml</script>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_gui</font>

@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>///Initialize ship
 
-scr_ship_init(5, -1);
+scr_ship_init(5, -1, 1);
 </string>
           </argument>
         </arguments>

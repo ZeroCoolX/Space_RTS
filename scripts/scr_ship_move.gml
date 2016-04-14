@@ -12,7 +12,7 @@ if(instance_exists(target)){
         with(target){
             instance_destroy();
         }
-        state = 'idle';
+        state = scr_ship_idle;
     }
 }
 

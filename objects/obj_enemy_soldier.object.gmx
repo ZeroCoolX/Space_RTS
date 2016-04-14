@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>//I/Initialize the ship
 event_inherited();
-scr_ship_init(7, obj_enemy_lazer);
+scr_ship_init(7, obj_enemy_lazer, 0);
 </string>
           </argument>
         </arguments>

@@ -17,6 +17,6 @@ if(instance_exists(foe) && foe != -1){
     
     if(distance_to_point(foe.x, foe.y) > 96){//sight thresh
         image_blend = c_white;
-        state = 'chase';
+        state = scr_enemy_ship_chase;
     }
 }

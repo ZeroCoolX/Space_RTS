@@ -26,10 +26,10 @@
           <argument>
             <kind>1</kind>
             <string>///Initialize the ship
-scr_ship_init(20, -1);
+scr_ship_init(20, -1, 1);
 
 image_speed = 0.2;
-state = 'idle';
+state = scr_station_idle;
 
 selected = false;
 button_distance = 64;
@@ -71,14 +71,15 @@ for(var i = 0; i &lt; button_count; ++i){
             <string>///Control the state 
 
 //image_angle += 1;
-
+script_execute(state);
+/*
 if(state == 'idle'){
     scr_station_idle();
 }else if(state == 'selected'){
     scr_station_selected();
 }else if(state == 'building'){
     scr_station_building();
-}
+}*/
 </string>
           </argument>
         </arguments>

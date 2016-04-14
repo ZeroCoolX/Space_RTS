@@ -7,7 +7,7 @@ friction = 0;
 if(instance_exists(foe)){
     //Attack the foe when we reach it
     if(distance_to_point(foe.x, foe.y) <= 64){
-        state = 'attack';
+        state = scr_enemy_ship_attack;
     }else{
         motion_add(point_direction(x, y, foe.x, foe.y), acc);
     }

@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>///Control the view
 scr_move_view();
+
 </string>
           </argument>
         </arguments>
