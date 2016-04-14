@@ -18,12 +18,18 @@
     <sprite>sprites\spr_rock</sprite>
     <sprite>sprites\spr_worker_button</sprite>
     <sprite>sprites\spr_soldier_button</sprite>
+    <sprite>sprites\solid</sprite>
+    <sprite>sprites\spr_explosion_center</sprite>
+    <sprite>sprites\spr_smoke_particle</sprite>
+    <sprite>sprites\spr_explosion_particle</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_solid</background>
+    <background>background\bg_solid_2</background>
+  </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
     <script>scripts\scr_ship_init.gml</script>
-    <script>scripts\scr_move_view.gml</script>
     <script>scripts\scr_part_lazer_init.gml</script>
     <script>scripts\scr_weapon_init.gml</script>
     <scripts name="Player">
@@ -42,7 +48,15 @@
       <script>scripts\scr_station_building.gml</script>
       <script>scripts\scr_station_idle.gml</script>
     </scripts>
-    <script>scripts\scr_view_zoom.gml</script>
+    <scripts name="Control">
+      <script>scripts\scr_move_view.gml</script>
+      <script>scripts\scr_tile_fill_object.gml</script>
+      <script>scripts\scr_view_zoom.gml</script>
+    </scripts>
+    <scripts name="Particle Effects">
+      <script>scripts\spr_create_part_type_sprite.gml</script>
+      <script>scripts\scr_create_explosion.gml</script>
+    </scripts>
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_gui</font>
@@ -77,10 +91,14 @@
     <objects name="Enviroment">
       <object>objects\obj_base</object>
       <object>objects\obj_crystal</object>
+      <object>objects\obj_solid</object>
     </objects>
+    <object>objects\obj_explosion_piece</object>
+    <object>objects\obj_particles</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_test</room>
+    <room>rooms\rm_tile_test</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

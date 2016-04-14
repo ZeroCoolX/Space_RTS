@@ -52,6 +52,8 @@ scr_ship_init(5, -1, 1);
             <kind>1</kind>
             <string>///Check for death
 if(hp &lt;= 0){
+    ///Create explosion
+    scr_create_explosion(x, y);
     instance_destroy();
 }
 </string>
