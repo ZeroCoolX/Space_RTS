@@ -26,6 +26,14 @@
   <backgrounds name="background">
     <background>background\bg_solid</background>
     <background>background\bg_solid_2</background>
+    <background>background\bk_grass</background>
+    <background>background\bk_dark_grasspatch</background>
+    <background>background\bk_dark_dirt</background>
+    <background>background\bk_darkgrass</background>
+    <background>background\bk_dark_grasspatch_2</background>
+    <background>background\bk_dark_grasspatch_3</background>
+    <background>background\background10</background>
+    <background>background\bk_grass_land</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
